@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIRANYA ESTATES — Crafted for Iconic Living</title>
+  <title>HIRANYA ESTATES — Own the Skyline. Live Like Royalty.</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     body { background-color: #070709; color: #fafaf9; line-height: 1.6; overflow-x: hidden; }
 
     /* Sleek Glass Navbar */
     nav {
-      background: rgba(7, 7, 9, 0.85);
+      background: rgba(7, 7, 9, 0.88);
       backdrop-filter: blur(12px);
       padding: 18px 7%;
       display: flex;
@@ -30,7 +30,7 @@
       color: #09090b !important;
       padding: 9px 20px;
       border-radius: 25px;
-      font-weight: 700 !important;
+      font-weight: 800 !important;
     }
 
     /* Cinematic Luxury Hero Section */
@@ -43,12 +43,12 @@
       align-items: center;
       text-align: center;
       padding: 90px 20px 70px;
-      background: linear-gradient(180deg, rgba(7,7,9,0.55) 0%, rgba(7,7,9,0.82) 70%, #070709 100%),
+      background: linear-gradient(180deg, rgba(7,7,9,0.52) 0%, rgba(7,7,9,0.82) 70%, #070709 100%),
                   url('https://unsplash.com') center/cover no-repeat;
     }
     .hero-pill {
-      background: rgba(212, 175, 55, 0.14);
-      border: 1px solid rgba(251, 191, 36, 0.5);
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.55);
       color: #fbbf24;
       padding: 7px 20px;
       border-radius: 30px;
@@ -60,28 +60,28 @@
       backdrop-filter: blur(6px);
     }
     .hero h1 {
-      font-size: 52px;
-      font-weight: 800;
+      font-size: 56px;
+      font-weight: 900;
       color: #ffffff;
-      max-width: 850px;
-      line-height: 1.15;
+      max-width: 860px;
+      line-height: 1.12;
       margin-bottom: 18px;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.8);
+      text-shadow: 0 4px 25px rgba(0,0,0,0.85);
     }
     .hero h1 span { color: #fbbf24; }
     .hero p {
-      font-size: 19px;
-      color: #e7e5e4;
-      max-width: 700px;
+      font-size: 20px;
+      color: #f5f5f4;
+      max-width: 720px;
       margin-bottom: 36px;
-      opacity: 0.92;
+      font-weight: 500;
     }
 
-    /* Glassmorphism Quick-Select Bar (Like Dribbble UI) */
+    /* Glassmorphism Quick-Select Bar */
     .glass-bar {
-      background: rgba(24, 24, 27, 0.72);
+      background: rgba(24, 24, 27, 0.75);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 175, 55, 0.45);
+      border: 1px solid rgba(212, 175, 55, 0.5);
       border-radius: 20px;
       padding: 18px 24px;
       display: flex;
@@ -91,7 +91,7 @@
       justify-content: center;
       max-width: 880px;
       width: 95%;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     }
     .glass-item { text-align: left; padding: 4px 14px; border-right: 1px solid rgba(255,255,255,0.12); }
     .glass-item:last-of-type { border-right: none; }
@@ -104,21 +104,21 @@
       margin: 20px auto 60px;
       padding: 28px 20px;
       background: #111114;
-      border: 1px solid rgba(212, 175, 55, 0.25);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       border-radius: 18px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       text-align: center;
     }
-    .stat-num { font-size: 30px; font-weight: 800; color: #fbbf24; }
-    .stat-txt { font-size: 13px; color: #a8a29e; text-transform: uppercase; letter-spacing: 1px; }
+    .stat-num { font-size: 32px; font-weight: 900; color: #fbbf24; }
+    .stat-txt { font-size: 13px; color: #d6d3d1; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
     /* Section Container */
     .container { max-width: 1160px; margin: 70px auto; padding: 0 22px; }
     .section-head { text-align: center; margin-bottom: 48px; }
     .section-head span { color: #d4af37; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-    .section-head h2 { font-size: 36px; color: #ffffff; margin-top: 6px; }
+    .section-head h2 { font-size: 36px; color: #ffffff; margin-top: 6px; font-weight: 800; }
 
     /* Luxury Property Cards */
     .cards-grid {
@@ -130,14 +130,13 @@
       background: #121215;
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.28);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       transition: all 0.35s ease;
-      position: relative;
     }
     .prop-card:hover {
       transform: translateY(-8px);
       border-color: #fbbf24;
-      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.18);
     }
     .img-wrap { position: relative; height: 240px; overflow: hidden; }
     .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
@@ -145,7 +144,7 @@
     .badge-top {
       position: absolute;
       top: 14px; left: 14px;
-      background: rgba(9, 9, 11, 0.85);
+      background: rgba(9, 9, 11, 0.88);
       border: 1px solid #d4af37;
       color: #fbbf24;
       padding: 5px 14px;
@@ -155,7 +154,7 @@
     }
     .prop-body { padding: 26px; }
     .prop-body h3 { font-size: 22px; color: #ffffff; margin-bottom: 8px; }
-    .prop-body p { font-size: 14px; color: #a8a29e; margin-bottom: 18px; }
+    .prop-body p { font-size: 15px; color: #e7e5e4; font-weight: 500; margin-bottom: 18px; }
     .prop-footer {
       display: flex;
       justify-content: space-between;
@@ -163,7 +162,7 @@
       padding-top: 15px;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-    .sqft { font-size: 13px; color: #d4af37; font-weight: 600; }
+    .sqft { font-size: 13px; color: #d4af37; font-weight: 700; }
     .card-link {
       background: transparent;
       border: 1px solid #d4af37;
@@ -176,10 +175,10 @@
     }
     .card-link:hover { background: #d4af37; color: #09090b; }
 
-    /* Signature Highlights Grid */
+    /* 4 Power Hooks Grid */
     .features-box {
       background: linear-gradient(145deg, #121215, #09090b);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      border: 1px solid rgba(212, 175, 55, 0.35);
       border-radius: 22px;
       padding: 45px 32px;
       margin-top: 75px;
@@ -197,10 +196,10 @@
       border-top: 2px solid #d4af37;
     }
     .feat-item h4 { color: #fbbf24; font-size: 17px; margin-bottom: 8px; }
-    .feat-item p { color: #d6d3d1; font-size: 14px; }
+    .feat-item p { color: #e7e5e4; font-size: 14px; }
 
     /* 3 Gold Interactive Buttons */
-    .action-panel { text-align: center; margin-top: 75px; padding: 50px 20px; background: radial-gradient(circle at center, rgba(212,175,55,0.12) 0%, transparent 70%); border-radius: 24px; }
+    .action-panel { text-align: center; margin-top: 75px; padding: 50px 20px; background: radial-gradient(circle at center, rgba(212,175,55,0.14) 0%, transparent 70%); border-radius: 24px; }
     .btn-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
     .btn-dark {
       background: #141417;
@@ -222,7 +221,7 @@
       font-size: 15px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
       transition: 0.25s;
     }
     .btn-dark:hover, .btn-gold:hover { transform: translateY(-3px); }
@@ -274,7 +273,7 @@
       font-size: 14px;
     }
     @media (max-width: 650px) {
-      .hero h1 { font-size: 34px; }
+      .hero h1 { font-size: 36px; }
       .glass-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
     }
   </style>
@@ -286,17 +285,19 @@
     <div class="logo">👑 HIRANYA ESTATES</div>
     <div class="nav-links">
       <a href="#residences">Residences</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience">Highlights</a>
       <a href="javascript:void(0)" class="nav-cta" onclick="document.getElementById('vipVisitPopup').style.display='flex'">VIP Visit</a>
     </div>
   </nav>
 
-  <!-- Cinematic Hero + Glassmorphism Filter Strip -->
+  <!-- Bold Hero + Glassmorphism Bar -->
   <section class="hero">
-    <div class="hero-pill">✨ Whitefield, Bengaluru • RERA Certified</div>
-    <h1>Where <span>Royal Architecture</span> Meets Peaceful Everyday Living</h1>
-    <p>Step into a world above the ordinary—curated 2, 3 & 4 BHK sanctuaries designed for families who settle for nothing less than extraordinary.</p>
+    <div class="hero-pill">✨ Whitefield, Bengaluru • RERA Approved</div>
+    <h1>Own the Skyline.<br><span>Live Like Royalty.</span></h1>
+    <p>Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield — Built for Those Who Lead.</p>
 
-    <!-- Floating Glass Bar -->
     <div class="glass-bar">
       <div class="glass-item">
+        <span class="glass-label">Location</span>
+
+     
