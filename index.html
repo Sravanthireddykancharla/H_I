@@ -5,299 +5,321 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HIRANYA ESTATES — Own the Skyline. Live Like Royalty.</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-    body { background-color: #070709; color: #fafaf9; line-height: 1.6; overflow-x: hidden; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+    body { background-color: #09090b; color: #ffffff; line-height: 1.65; }
 
-    /* Sleek Glass Navbar */
+    /* Top Bar */
     nav {
-      background: rgba(7, 7, 9, 0.88);
-      backdrop-filter: blur(12px);
-      padding: 18px 7%;
+      background: rgba(9, 9, 11, 0.94);
+      padding: 16px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      border-bottom: 2px solid #d4af37;
       position: sticky;
       top: 0;
       z-index: 100;
     }
-    .logo { font-size: 22px; font-weight: 800; color: #fbbf24; letter-spacing: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 26px; }
-    .nav-links a { color: #e7e5e4; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; }
-    .nav-links a:hover { color: #fbbf24; }
-    .nav-cta {
-      background: linear-gradient(135deg, #fbbf24, #d4af37);
-      color: #09090b !important;
+    .logo { font-size: 22px; font-weight: 900; color: #fbbf24; letter-spacing: 1.5px; }
+    .nav-btn {
+      background: #fbbf24;
+      color: #09090b;
       padding: 9px 20px;
       border-radius: 25px;
-      font-weight: 800 !important;
+      font-weight: 800;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
     }
 
-    /* Cinematic Luxury Hero Section */
+    /* Hero Section with Guaranteed Background Image Layer */
     .hero {
       position: relative;
       min-height: 85vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 90px 20px 70px;
-      background: linear-gradient(180deg, rgba(7,7,9,0.52) 0%, rgba(7,7,9,0.82) 70%, #070709 100%),
-                  url('https://unsplash.com') center/cover no-repeat;
-    }
-    .hero-pill {
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(251, 191, 36, 0.55);
-      color: #fbbf24;
-      padding: 7px 20px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      backdrop-filter: blur(6px);
-    }
-    .hero h1 {
-      font-size: 56px;
-      font-weight: 900;
-      color: #ffffff;
-      max-width: 860px;
-      line-height: 1.12;
-      margin-bottom: 18px;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.85);
-    }
-    .hero h1 span { color: #fbbf24; }
-    .hero p {
-      font-size: 20px;
-      color: #f5f5f4;
-      max-width: 720px;
-      margin-bottom: 36px;
-      font-weight: 500;
-    }
-
-    /* Glassmorphism Quick-Select Bar */
-    .glass-bar {
-      background: rgba(24, 24, 27, 0.75);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      border-radius: 20px;
-      padding: 18px 24px;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      flex-wrap: wrap;
       justify-content: center;
-      max-width: 880px;
-      width: 95%;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-    }
-    .glass-item { text-align: left; padding: 4px 14px; border-right: 1px solid rgba(255,255,255,0.12); }
-    .glass-item:last-of-type { border-right: none; }
-    .glass-label { font-size: 11px; color: #a8a29e; text-transform: uppercase; letter-spacing: 1px; display: block; }
-    .glass-val { font-size: 15px; color: #fbbf24; font-weight: 700; }
-
-    /* Stats Strip */
-    .stats-strip {
-      max-width: 1050px;
-      margin: 20px auto 60px;
-      padding: 28px 20px;
-      background: #111114;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 18px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+      padding: 80px 20px;
       text-align: center;
-    }
-    .stat-num { font-size: 32px; font-weight: 900; color: #fbbf24; }
-    .stat-txt { font-size: 13px; color: #d6d3d1; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-
-    /* Section Container */
-    .container { max-width: 1160px; margin: 70px auto; padding: 0 22px; }
-    .section-head { text-align: center; margin-bottom: 48px; }
-    .section-head span { color: #d4af37; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-    .section-head h2 { font-size: 36px; color: #ffffff; margin-top: 6px; font-weight: 800; }
-
-    /* Luxury Property Cards */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 30px;
-    }
-    .prop-card {
-      background: #121215;
-      border-radius: 20px;
+      border-bottom: 4px solid #d4af37;
       overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      transition: all 0.35s ease;
     }
-    .prop-card:hover {
-      transform: translateY(-8px);
-      border-color: #fbbf24;
-      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.18);
-    }
-    .img-wrap { position: relative; height: 240px; overflow: hidden; }
-    .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .prop-card:hover .img-wrap img { transform: scale(1.06); }
-    .badge-top {
+    .hero-bg {
       position: absolute;
-      top: 14px; left: 14px;
-      background: rgba(9, 9, 11, 0.88);
-      border: 1px solid #d4af37;
-      color: #fbbf24;
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 700;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.75);
     }
-    .prop-body { padding: 26px; }
-    .prop-body h3 { font-size: 22px; color: #ffffff; margin-bottom: 8px; }
-    .prop-body p { font-size: 15px; color: #e7e5e4; font-weight: 500; margin-bottom: 18px; }
-    .prop-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 15px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(180deg, rgba(9,9,11,0.35) 0%, rgba(9,9,11,0.75) 100%);
+      z-index: 1;
     }
-    .sqft { font-size: 13px; color: #d4af37; font-weight: 700; }
-    .card-link {
-      background: transparent;
-      border: 1px solid #d4af37;
+    .hero-card {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      width: 100%;
+      background: rgba(9, 9, 11, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1.5px solid #d4af37;
+      border-radius: 22px;
+      padding: 44px 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(251, 191, 36, 0.18);
+      border: 1px solid #fbbf24;
       color: #fbbf24;
-      padding: 7px 16px;
+      padding: 6px 16px;
       border-radius: 20px;
       font-size: 13px;
       font-weight: 700;
-      cursor: pointer;
+      margin-bottom: 18px;
     }
-    .card-link:hover { background: #d4af37; color: #09090b; }
+    .hero h1 {
+      font-size: 46px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: #fbbf24; }
+    .hero p {
+      font-size: 19px;
+      color: #f4f4f5;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
 
-    /* 4 Power Hooks Grid */
-    .features-box {
-      background: linear-gradient(145deg, #121215, #09090b);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      border-radius: 22px;
-      padding: 45px 32px;
-      margin-top: 75px;
+    /* Main Container */
+    .container { max-width: 1120px; margin: 55px auto; padding: 0 20px; }
+
+    /* Highlight Numbers */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-bottom: 60px;
     }
-    .feat-grid {
+    .stat-box {
+      background: #141417;
+      border: 1px solid #d4af37;
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .stat-box h3 { font-size: 32px; color: #fbbf24; font-weight: 900; }
+    .stat-box p { font-size: 14px; color: #e4e4e7; font-weight: 600; margin-top: 4px; }
+
+    /* Section Heading */
+    .sec-title {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 10px;
+    }
+    .sec-sub {
+      text-align: center;
+      font-size: 17px;
+      color: #e4e4e7;
+      margin-bottom: 40px;
+    }
+
+    /* 3 Photo + Bold Text Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .card {
+      background: #141417;
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .card img { width: 100%; height: 220px; object-fit: cover; display: block; background: #1c1917; }
+    .card-text { padding: 24px; }
+    .card-tag { color: #fbbf24; font-size: 13px; font-weight: 800; text-transform: uppercase; }
+    .card-text h3 { font-size: 23px; color: #ffffff; margin: 6px 0 10px; }
+    .card-text p { font-size: 15px; color: #e4e4e7; margin-bottom: 16px; }
+    .card-size { font-size: 14px; color: #fbbf24; font-weight: 700; }
+
+    /* Why Hiranya Text List */
+    .why-box {
+      background: #141417;
+      border: 1.5px solid #d4af37;
+      border-radius: 20px;
+      padding: 36px 28px;
+      margin-bottom: 55px;
+    }
+    .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      gap: 20px;
+      margin-top: 25px;
     }
-    .feat-item {
-      background: rgba(255,255,255,0.03);
-      padding: 22px;
+    .why-item {
+      background: #09090b;
+      padding: 20px;
       border-radius: 14px;
-      border-top: 2px solid #d4af37;
+      border-left: 4px solid #fbbf24;
     }
-    .feat-item h4 { color: #fbbf24; font-size: 17px; margin-bottom: 8px; }
-    .feat-item p { color: #e7e5e4; font-size: 14px; }
+    .why-item h4 { color: #fbbf24; font-size: 18px; margin-bottom: 6px; }
+    .why-item p { color: #f4f4f5; font-size: 15px; }
 
-    /* 3 Gold Interactive Buttons */
-    .action-panel { text-align: center; margin-top: 75px; padding: 50px 20px; background: radial-gradient(circle at center, rgba(212,175,55,0.14) 0%, transparent 70%); border-radius: 24px; }
-    .btn-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
     .btn-dark {
-      background: #141417;
+      background: #18181b;
       color: #fbbf24;
-      border: 2px solid #d4af37;
+      border: 2px solid #fbbf24;
       padding: 14px 26px;
       border-radius: 30px;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 800;
       cursor: pointer;
-      transition: 0.25s;
     }
     .btn-gold {
-      background: linear-gradient(135deg, #fbbf24, #d4af37);
+      background: #fbbf24;
       color: #09090b;
       border: 2px solid #b45309;
       padding: 14px 28px;
       border-radius: 30px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
-      transition: 0.25s;
     }
-    .btn-dark:hover, .btn-gold:hover { transform: translateY(-3px); }
 
     /* Popups */
-    .popup-overlay {
+    .popup {
       display: none;
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.88);
       justify-content: center;
       align-items: center;
       z-index: 999;
     }
-    .popup-box {
-      background: #111114;
-      color: #fafaf9;
-      padding: 34px;
+    .popup-content {
+      background: #141417;
+      border: 2px solid #fbbf24;
       border-radius: 20px;
-      border: 2px solid #d4af37;
-      max-width: 450px;
+      padding: 32px;
+      max-width: 440px;
       width: 90%;
       text-align: center;
       position: relative;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.9);
     }
-    .close-btn { position: absolute; top: 12px; right: 18px; color: #fbbf24; font-size: 28px; cursor: pointer; }
-    .popup-box h2 { color: #fbbf24; margin-bottom: 14px; }
-    .popup-box p { color: #e7e5e4; font-size: 15px; line-height: 1.8; }
-    .wa-btn {
-      background: #22c55e;
-      color: #ffffff;
-      padding: 13px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
+    .close {
+      position: absolute;
+      top: 12px; right: 18px;
+      font-size: 28px;
+      color: #fbbf24;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .popup-content h2 { color: #fbbf24; font-size: 24px; margin-bottom: 14px; }
+    .popup-content p { color: #ffffff; font-size: 16px; line-height: 1.8; }
+    .wa-link {
       display: inline-block;
       margin-top: 18px;
+      background: #22c55e;
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: 28px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 16px;
     }
 
     footer {
       text-align: center;
-      padding: 32px 20px;
-      margin-top: 60px;
-      border-top: 1px solid rgba(212, 175, 55, 0.25);
-      color: #78716c;
+      padding: 28px;
+      border-top: 1px solid #d4af37;
+      color: #d4d4d8;
       font-size: 14px;
     }
-    @media (max-width: 650px) {
-      .hero h1 { font-size: 36px; }
-      .glass-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 32px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sleek Glass Navbar -->
   <nav>
     <div class="logo">👑 HIRANYA ESTATES</div>
-    <div class="nav-links">
-      <a href="#residences">Residences</a>
-      <a href="#experience">Highlights</a>
-      <a href="javascript:void(0)" class="nav-cta" onclick="document.getElementById('vipVisitPopup').style.display='flex'">VIP Visit</a>
-    </div>
+    <button class="nav-btn" onclick="document.getElementById('visitPop').style.display='flex'">Book VIP Visit</button>
   </nav>
 
-  <!-- Bold Hero + Glassmorphism Bar -->
+  <!-- Hero Section with Visible Background Photo + Clear Contrast Text Box -->
   <section class="hero">
-    <div class="hero-pill">✨ Whitefield, Bengaluru • RERA Approved</div>
-    <h1>Own the Skyline.<br><span>Live Like Royalty.</span></h1>
-    <p>Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield — Built for Those Who Lead.</p>
+    <img class="hero-bg" src="https://pexels.com" onerror="this.src='https://pexels.com'" alt="Hiranya Estates Luxury Architecture">
+    <div class="hero-overlay"></div>
+    <div class="hero-card">
+      <div class="badge">✨ WHITEFIELD, BENGALURU • RERA APPROVED</div>
+      <h1>Own the Skyline.<br><span>Live Like Royalty.</span></h1>
+      <p>Iconic 2, 3 & 4 BHK Luxury Residences in Whitefield — Built for Those Who Lead.</p>
+      <div class="btn-group">
+        <button class="btn-gold" onclick="document.getElementById('offerPop').style.display='flex'">💎 Save ₹15 Lakhs Pre-Launch</button>
+        <button class="btn-dark" onclick="document.getElementById('visitPop').style.display='flex'">🚘 Book VIP Site Visit</button>
+      </div>
+    </div>
+  </section>
 
-    <div class="glass-bar">
-      <div class="glass-item">
-        <span class="glass-label">Location</span>
+  <div class="container">
+    <!-- Bold Highlight Stats -->
+    <div class="stats">
+      <div class="stat-box"><h3>75%</h3><p>Open Green Sanctuary</p></div>
+      <div class="stat-box"><h3>5 Mins</h3><p>To ITPL & Metro Station</p></div>
+      <div class="stat-box"><h3>₹15 Lakhs</h3><p>Pre-Launch Savings</p></div>
+      <div class="stat-box"><h3>100%</h3><p>RERA & Vastu Approved</p></div>
+    </div>
+
+    <!-- Residences with Photos + Clear Bold Text -->
+    <h2 class="sec-title">🔑 Signature Luxury Residences</h2>
+    <p class="sec-sub">Sunlit interiors, private balconies, and architectural brilliance in every home</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://pexels.com" alt="2 BHK Urban Crown">
+        <div class="card-text">
+          <span class="card-tag">Urban Crown</span>
+          <h3>2 BHK Signature Homes</h3>
+          <p>Smart. Sleek. Unapologetically Modern. Zero-wastage layouts crafted for high-flying professionals.</p>
+          <div class="card-size">📐 Area: 1,320 Sq.Ft.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://pexels.com" alt="3 BHK Royal Pavilion">
+        <div class="card-text">
+          <span class="card-tag">Royal Pavilion</span>
+          <h3>3 BHK Grand Corner Suites</h3>
+          <p>Triple-Aspect Views. Zero Compromise. Wide living decks, private foyer & complete family privacy.</p>
+          <div class="card-size">📐 Area: 1,980 Sq.Ft.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://pexels.com" alt="4 BHK Sky Mansion">
+        <div class="card-text">
+          <span class="card-tag">Sky Mansion</span>
+          <h3>4 BHK Ultra-Luxury Villas</h3>
 
      
+ 
