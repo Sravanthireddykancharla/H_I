@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIRANYA ESTATES — Crafted for Iconic Living</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #070709; color: #fafaf9; line-height: 1.6; overflow-x: hidden; }
+
+    /* Sleek Glass Navbar */
+    nav {
+      background: rgba(7, 7, 9, 0.85);
+      backdrop-filter: blur(12px);
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 22px; font-weight: 800; color: #fbbf24; letter-spacing: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { color: #e7e5e4; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; }
+    .nav-links a:hover { color: #fbbf24; }
+    .nav-cta {
+      background: linear-gradient(135deg, #fbbf24, #d4af37);
+      color: #09090b !important;
+      padding: 9px 20px;
+      border-radius: 25px;
+      font-weight: 700 !important;
+    }
+
+    /* Cinematic Luxury Hero Section */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 90px 20px 70px;
+      background: linear-gradient(180deg, rgba(7,7,9,0.55) 0%, rgba(7,7,9,0.82) 70%, #070709 100%),
+                  url('https://unsplash.com') center/cover no-repeat;
+    }
+    .hero-pill {
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      color: #fbbf24;
+      padding: 7px 20px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      color: #ffffff;
+      max-width: 850px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      text-shadow: 0 4px 25px rgba(0,0,0,0.8);
+    }
+    .hero h1 span { color: #fbbf24; }
+    .hero p {
+      font-size: 19px;
+      color: #e7e5e4;
+      max-width: 700px;
+      margin-bottom: 36px;
+      opacity: 0.92;
+    }
+
+    /* Glassmorphism Quick-Select Bar (Like Dribbble UI) */
+    .glass-bar {
+      background: rgba(24, 24, 27, 0.72);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 20px;
+      padding: 18px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 880px;
+      width: 95%;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+    }
+    .glass-item { text-align: left; padding: 4px 14px; border-right: 1px solid rgba(255,255,255,0.12); }
+    .glass-item:last-of-type { border-right: none; }
+    .glass-label { font-size: 11px; color: #a8a29e; text-transform: uppercase; letter-spacing: 1px; display: block; }
+    .glass-val { font-size: 15px; color: #fbbf24; font-weight: 700; }
+
+    /* Stats Strip */
+    .stats-strip {
+      max-width: 1050px;
+      margin: 20px auto 60px;
+      padding: 28px 20px;
+      background: #111114;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .stat-num { font-size: 30px; font-weight: 800; color: #fbbf24; }
+    .stat-txt { font-size: 13px; color: #a8a29e; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Section Container */
+    .container { max-width: 1160px; margin: 70px auto; padding: 0 22px; }
+    .section-head { text-align: center; margin-bottom: 48px; }
+    .section-head span { color: #d4af37; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .section-head h2 { font-size: 36px; color: #ffffff; margin-top: 6px; }
+
+    /* Luxury Property Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 30px;
+    }
+    .prop-card {
+      background: #121215;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+    .prop-card:hover {
+      transform: translateY(-8px);
+      border-color: #fbbf24;
+      box-shadow: 0 18px 40px rgba(212, 175, 55, 0.15);
+    }
+    .img-wrap { position: relative; height: 240px; overflow: hidden; }
+    .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .prop-card:hover .img-wrap img { transform: scale(1.06); }
+    .badge-top {
+      position: absolute;
+      top: 14px; left: 14px;
+      background: rgba(9, 9, 11, 0.85);
+      border: 1px solid #d4af37;
+      color: #fbbf24;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .prop-body { padding: 26px; }
+    .prop-body h3 { font-size: 22px; color: #ffffff; margin-bottom: 8px; }
+    .prop-body p { font-size: 14px; color: #a8a29e; margin-bottom: 18px; }
+    .prop-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .sqft { font-size: 13px; color: #d4af37; font-weight: 600; }
+    .card-link {
+      background: transparent;
+      border: 1px solid #d4af37;
+      color: #fbbf24;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .card-link:hover { background: #d4af37; color: #09090b; }
+
+    /* Signature Highlights Grid */
+    .features-box {
+      background: linear-gradient(145deg, #121215, #09090b);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 22px;
+      padding: 45px 32px;
+      margin-top: 75px;
+    }
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .feat-item {
+      background: rgba(255,255,255,0.03);
+      padding: 22px;
+      border-radius: 14px;
+      border-top: 2px solid #d4af37;
+    }
+    .feat-item h4 { color: #fbbf24; font-size: 17px; margin-bottom: 8px; }
+    .feat-item p { color: #d6d3d1; font-size: 14px; }
+
+    /* 3 Gold Interactive Buttons */
+    .action-panel { text-align: center; margin-top: 75px; padding: 50px 20px; background: radial-gradient(circle at center, rgba(212,175,55,0.12) 0%, transparent 70%); border-radius: 24px; }
+    .btn-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+    .btn-dark {
+      background: #141417;
+      color: #fbbf24;
+      border: 2px solid #d4af37;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #fbbf24, #d4af37);
+      color: #09090b;
+      border: 2px solid #b45309;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+      transition: 0.25s;
+    }
+    .btn-dark:hover, .btn-gold:hover { transform: translateY(-3px); }
+
+    /* Popups */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .popup-box {
+      background: #111114;
+      color: #fafaf9;
+      padding: 34px;
+      border-radius: 20px;
+      border: 2px solid #d4af37;
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+    }
+    .close-btn { position: absolute; top: 12px; right: 18px; color: #fbbf24; font-size: 28px; cursor: pointer; }
+    .popup-box h2 { color: #fbbf24; margin-bottom: 14px; }
+    .popup-box p { color: #e7e5e4; font-size: 15px; line-height: 1.8; }
+    .wa-btn {
+      background: #22c55e;
+      color: #ffffff;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      margin-top: 60px;
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+      color: #78716c;
+      font-size: 14px;
+    }
+    @media (max-width: 650px) {
+      .hero h1 { font-size: 34px; }
+      .glass-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sleek Glass Navbar -->
+  <nav>
+    <div class="logo">👑 HIRANYA ESTATES</div>
+    <div class="nav-links">
+      <a href="#residences">Residences</a>
+      <a href="#experience">Experience</a>
+      <a href="javascript:void(0)" class="nav-cta" onclick="document.getElementById('vipVisitPopup').style.display='flex'">VIP Visit</a>
+    </div>
+  </nav>
+
+  <!-- Cinematic Hero + Glassmorphism Filter Strip -->
+  <section class="hero">
+    <div class="hero-pill">✨ Whitefield, Bengaluru • RERA Certified</div>
+    <h1>Where <span>Royal Architecture</span> Meets Peaceful Everyday Living</h1>
+    <p>Step into a world above the ordinary—curated 2, 3 & 4 BHK sanctuaries designed for families who settle for nothing less than extraordinary.</p>
+
+    <!-- Floating Glass Bar -->
+    <div class="glass-bar">
+      <div class="glass-item">
